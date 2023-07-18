@@ -6,11 +6,28 @@
     </nav>
     <div class="main">
       
-          <router-view/>
+    <router-view @getGame="saveGame"/>
+    
     </div>
 
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return{
+      games:{}, // objeto de objetos id:{nombre: , opiniones:{autor: ,opinion}} 
+      gamesData:[]
+    }
+  },
+  methods:{
+    saveGame(ob){
+      this.gamesData.push(ob)
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 body, ul, ol{

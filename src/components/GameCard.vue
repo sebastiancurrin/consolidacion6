@@ -10,7 +10,12 @@
     
     <button>
         <router-link :to="{name:'opiniones',
-            params:{gameroute,name:game.name}}">
+            params:{gameroute,
+                    gameName:game.name,
+                    gameId:game.id,
+                    gameOpinions:opiniones
+                    }
+                    }">
             opinar
         </router-link>
     </button>
@@ -28,6 +33,20 @@ export default {
         'nombreJuego',
         'game'
     ],
+    data(){
+        return{
+            opiniones:[
+                {   
+                    autor:'jack',
+                    opinion:'juego malo'},
+                {
+                    autor:'bob',
+                    opinion:'juego bueno'
+                },
+                
+                ]
+        }
+    },
     computed:{
         gameroute(){
             return this.game.name.replace(/\s/g, "");

@@ -6,16 +6,25 @@
 
       <form>
         
-        <label for="autor">Nombre</label>
-        <input v-model="autor" 
-            type="text" placeholder="nombre">
-        
-        <label for="opinion">Opinion</label>
-        <textarea
-            v-model="opinion" 
-            placeholder="Tu opinion debe ir aqui" 
-            cols="30" rows="10"></textarea>
-        
+        <div class="field">
+            <label class="label" for="autor">Nombre</label>
+            <div class="control">
+                <input v-model="autor"
+                    type="text" placeholder="nombre">
+            </div>
+            
+        </div>
+
+        <div class="field">
+            <label class="label" for="opinion">Opinion</label>
+            <div class="control">
+                <textarea
+                    v-model="opinion"
+                    placeholder="Tu opinion debe ir aqui"
+                    cols="30" rows="10"></textarea>
+            </div>
+            
+        </div>
         <button @click="agregar">agregar</button>
       
       </form>

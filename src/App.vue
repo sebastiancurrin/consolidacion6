@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <nav class="nav"> 
+    <nav class="navbar is-warning"> 
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
     </nav>
     <div class="main">
       

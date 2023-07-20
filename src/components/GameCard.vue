@@ -1,5 +1,5 @@
 <template>
-  <div class="gameCard gameCard-border">
+  <div class="card p-4 column is-one-quarter">
     <h1>juego: {{game.name}}</h1>
     <h2>rating: {{game.rating}}</h2>
     <h2>lanzado: {{game.released}}</h2>
@@ -7,8 +7,8 @@
 
     <img class="gameCard__img" 
         :src="game.background_image" alt="">
-    
-    <button>
+    <footer class="card-footer">
+    <button class="card-footer-item button">
         <router-link :to="{name:'opiniones',
             params:{gameroute,
                     gameName:game.name,
@@ -20,10 +20,12 @@
         </router-link>
     </button>
     
-    <button>
+    <button class="card-footer-item button">
         <router-link :to="{name:'administracion'}">
             corazon</router-link>
         </button>
+  
+  </footer>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <div>
+    <div class="columns is-multiline is-mobile">
       <GameCard
           v-for="game,index in games" :key="index"
           :img_src="imagen"
           :game="game"
       />
     </div>
-    <button @click="cargarMas">
+    <button class="button is-warning" @click="cargarMas">
       cargar 20+</button>
   </div>
 </template>
@@ -67,6 +67,5 @@ export default {
     display: block;
     width: 90%;
     margin: 0 auto;
-    background-color: blue;
   }
 </style>
